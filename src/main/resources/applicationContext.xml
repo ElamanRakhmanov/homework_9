@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:contest="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <contest:property-placeholder location = "application.properties"/>
+
+
+    <bean id = "cat" class = "com.peaksoft.Cat">
+        <property name="name" value="${cat.name}"/>
+
+        <property name="poroda" value="${cat.poroda}"/>
+
+        <property name="age" value="${cat.age}"/>
+
+        <property name="color" value="${cat.color}"/>
+    </bean>
+
+
+
+    <bean id="dog" class="com.peaksoft.Dog">
+        <property name="name" value="${dog.name}"/>
+
+        <property name="age" value="${dog.age}"/>
+
+        <property name="color" value="${dog.color}"/>
+
+        <property name="poroda" value="${dog.poroda}"/>
+    </bean>
+
+
+
+    <bean id = "Person" class="com.peaksoft.Person">
+
+        <property name="name" value="${person.name}"/>
+
+        <property name="age" value="${person.age}"/>
+    </bean>
+
+
+
+    <bean id="Person2" class="com.peaksoft.Person">
+
+        <property name="name" value="${person2.name}"/>
+
+        <property name="age" value="${person2.age}"/>
+    </bean>
+
+</beans>
